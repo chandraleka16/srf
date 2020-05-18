@@ -7,7 +7,8 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		
-		mysqli_query($conn, "INSERT INTO `user` VALUES('', '$firstname', '$lastname', '$username', '$password')") or die(mysqli_error());
+		mysqli_query($conn, "INSERT INTO `user` (`firstname`, `lastname`, `username`, `password`) VALUES
+('$firstname', '$lastname', '$username', '$password');") or die(mysqli_error());
 		echo "<h3 class='text-success'>User account registered!</h3>";
 	}
 ?>
