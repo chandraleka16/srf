@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_user`
+-- Database: `lamp_task`
 --
 
 -- --------------------------------------------------------
@@ -27,6 +27,20 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `user`
 --
+
+CREATE DATABASE `lamp_task`;
+CREATE USER 'mychan_user1'@'%' IDENTIFIED BY 'password123';
+ALTER USER 'mychan_user1'@'%' IDENTIFIED WITH mysql_native_password BY 'password123';
+GRANT ALL PRIVILEGES ON `lamp_task.*` TO 'mychan_user1'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';
+FLUSH PRIVILEGES;
+
+
+USE `lamp_task`;
+
+
+
+
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
