@@ -27,7 +27,6 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `user`
 --
-
 CREATE DATABASE `lamp_task`;
 CREATE USER 'mychan_user1'@'%' IDENTIFIED BY 'password123';
 ALTER USER 'mychan_user1'@'%' IDENTIFIED WITH mysql_native_password BY 'password123';
@@ -38,16 +37,13 @@ FLUSH PRIVILEGES;
 
 USE `lamp_task`;
 
-
-
-
-
 CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(12) NOT NULL
+  `password` varchar(12) NOT NULL,
+  PRIMARY KEY(user_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
